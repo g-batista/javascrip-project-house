@@ -1,0 +1,27 @@
+Project 1 Details
+Project 1 - Javascript Fundamentals
+Objectives
+variables and datatypes
+functions and objects
+form data and processing
+Project Details
+Create a page that displays a group of selections based on the assumption that you are building a new house. The selections that you make will determine the cost of building the house. Upon completion of house configuration, the user should be presented with a detailed cost estimate that includes the user selections as well as the budget impact for each selection. There should also be a grand total cost to build the configured house. The following options can be configured:
+1 story vs. 2 story - a single story house will cost $175 / square foot whereas a 2 story house will cost $135 / square foot
+color - will have no impact on the cost of the house, but will need to be reflected in the cost estimate
+garage size (# of vehicles) - $15000 / vehicle
+exterior material
+vinyl - no additional cost
+wood - $5000 additional cost + $10 / square foot
+brick - $8000 additional cost + $10 / square foot
+stucco - $6000 additional cost
+stone - $16000 additional cost
+square footage - used in conjunction with the other house attributes to determine a house price
+An example house configuration user interface. The user interface must closely match the interface below. You cannot substitute radio buttons for the images. When the user selects one of the options, it must be visually apparent on the user-interface which option has been selected.
+example user interface
+An example detailed estimate user interface. This estimate needs to be presented below the "Get Detailed Estimate" button. The user must then be able to make adjustments to their selections and click "Get Detailed Estimate" to get an updated detailed estimate. The estimate displayed on the screen (only 1 estimate should ever be displayed), must be accurate based on the user's currently selected options.
+example user interface
+What did I learn?
+javascript variables and variable types
+performing js calculations
+form processing
+js input and output

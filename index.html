@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="buildHouse.css" />
+    <!-- Favi Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <title>Buildin a House</title>
+  </head>
+  <body class="container mb-4">
+    <h1>Build House JS</h1>
+
+    <form>
+      <div class="selections">
+        <div class="house">
+          <h3>Select The House Type:</h3>
+  
+          <input
+            id="one_story"
+            class="hidden"
+            type="radio"
+            name="house"
+            value="1"
+            name="house"
+            required/>
+  
+          <label for="one_story">
+            <img
+                class="border border-dark border-3" 
+                src="images/casa.jpeg" 
+                width="300" 
+                height="200"/>
+          </label>
+  
+          <input
+                id="two_story"
+                class="hidden"
+                type="radio"
+                name="house"
+                value="2"
+                name="house"/>
+  
+          <label for="two_story">
+            <img 
+                class="border border-dark border-3" 
+                src="images/casa2.jpg" 
+                width="300" 
+                height="200"/>
+          </label>
+        </div>
+        <br />
+        <h3>Chose the house color:</h3>
+        <div class="colors border-4 border-secondary border-bottom container col-md-6 pb-2">
+          <input
+            type="color"
+            id="cores"
+            name="ArcoIris"
+            list="arcoIris"
+            value="#FF0000"/>
+          <datalist id="arcoIris">
+            <option value="#FF0000">Vermelho</option>
+            <option value="#FFA500">Laranja</option>
+            <option value="#FFFF00">Amarelo</option>
+            <option value="#008000">Verde</option>
+            <option value="#0000FF">Azul</option>
+            <option value="#4B0082">Indigo</option>
+            <option value="#EE82EE">Violeta</option>
+          </datalist>
+        </div>
+        
+        <br />
+        <h3>Select the material type:</h3>
+        <div class="material border-4 border-secondary border-bottom container col-md-6 pb-2">
+          <input
+            id="vinyl"
+            class="hidden"
+            type="radio"
+            name="material"
+            value="0"/>
+          <label for="vinyl">
+            <img 
+                src="images/vinil.jpeg" 
+                width="70" 
+                height="50"
+                class=" border border-2 border-dark"/>
+          </label>
+  
+          <input
+              id="wood"
+              class="hidden"
+              type="radio"
+              name="material"
+              value="1"/>
+          <label for="wood">
+            <img 
+              src="images/wood.jpg" 
+              width="70" 
+              height="50"
+              class=" border border-2 border-dark">
+          </label>
+  
+          <input
+            id="brick"
+            class="hidden"
+            type="radio"
+            name="material"
+            value="2"/>
+          <label for="brick">
+            <img 
+              src="images/brick.jpeg" 
+              width="70" 
+              height="50"
+              class=" border border-2 border-dark"/>
+          </label>
+  
+          <input
+            id="stucco"
+            class="hidden"
+            type="radio"
+            name="material"
+            value="3"/>
+          <label for="stucco">
+            <img 
+                src="images/stucco.jpeg" 
+                width="70" 
+                height="50"
+                class=" border border-2 border-dark"/>
+          </label>
+  
+          <input
+            id="stone"
+            class="hidden"
+            type="radio"
+            name="material"
+            value="4"/>
+          <label for="stone">
+            <img 
+              src="images/stone.jpeg" 
+              width="70" 
+              height="50"
+              class=" border border-2 border-dark"/>
+          </label>
+        </div>
+        <br />
+  
+        <h3>Enter The Squere Footage:</h3>
+        <div class="border-4 border-secondary border-bottom container col-md-6 pb-2">
+          <label for="squareFoot">Squere Footage:</label>
+          <input type="number" min="1" id="squareFoot" name="squareFoot" required"/>
+        </div>
+        <br />
+  
+        <h3>Select Garage Sise:</h3>
+        <div calss="border-4 border-secondary border-bottom container col-md-6 pb-2">
+          <label for="veicles">numbe of veicles:</label>
+          <input
+            class="veicles"
+            type="radio"
+            id="vehicle_one"
+            name="veicles"
+            value="1"/>
+          <label for="vehicle_one">1</label>
+  
+          <input
+            class="veicles"
+            type="radio"
+            id="vehicle_two"
+            name="veicles"
+            value="2"/>
+          <label for="vehicle_two">2</label>
+  
+          <input
+            class="veicles"
+            type="radio"
+            id="vehicle_three"
+            name="veicles"
+            value="3"/>
+          <label for="vehicle_three">3</label>
+        </div>
+        <br />
+  
+        <div class="center">
+          <button 
+              type="button" 
+              onclick="playResult();"
+              class="btn btn-warning"
+              >
+                Print Resut
+          </button>
+        </div>
+        <br />
+      </div>
+    </form>
+
+
+    <!-- Results colected -->
+    <div class="details hidden">
+      <h4 class="house_size_result"></h4>
+      <img 
+          class="house_img_result border border-3 border-dark mb-2" 
+          style="height:300px; width:400px"/>
+
+      <h4>Color</h4>
+      <div style="height:200px; width:300px;"  
+      class="color_result border border-3 border-dark mb-2"></div>
+
+      <h4>External material</h4>
+      <img class="material_result border border-3 border-dark mb-2"  
+      style="height:300px; width:400px"/>
+
+      <h4>Number of Vehicles:</h4>
+      <h5 class="vehicles_result"></h5>
+
+      <h4>Square Foot:</h4>
+      <h5 class="squarefoot_result"></h5>
+
+      <h4>Estimated Cost:</h4>
+      <h5 class="cost"></h5>
+
+      <br />
+      <div>
+        <a href="index.html" class="btn btn-danger m-4">Retorne</a>
+      </div>
+      <br />  
+    </div>
+
+    <footer class="bg-light text-center text-lg-start ">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: #b9c5d5">
+        © 2020 Copyright:
+        <a class="text-dark" href="#">Portifolio.com</a>
+      </div>
+    </footer>
+
+    <script src="buildHouse.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  </body>
+</html>
